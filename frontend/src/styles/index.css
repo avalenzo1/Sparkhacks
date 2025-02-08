@@ -6,3 +6,37 @@ body {
 .MuiTypography-root {
   color: #0C3C26; 
 }
+
+.header {
+  background-color: #3A73A1;
+  padding: 1rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-family: "Papyrus", "Brush Script MT", "Lucida Handwriting", "Arial";
+  font-size: 1.2rem;
+  font-style: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #47acff; /* Change the hover color */
+}
