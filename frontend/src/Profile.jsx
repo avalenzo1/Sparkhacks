@@ -3,9 +3,32 @@ import { Link } from "react-router-dom";
 import "./styles/index.css";
 
 function Profile() {
+  const coursesActive = [
+    { course: "CS301", semester: "Spring 2025", activeStatus: true },
+    { course: "CS261", semester: "Spring 2025", activeStatus: true },
+    { course: "IE 341", semester: "Spring 2025", activeStatus: true },
+  ];
+  const coursesPrevious = [
+    { course: "CS 361", semester: "Fall 2024", activeStatus: false },
+    { course: "CS 211", semester: "Fall 2024", activeStatus: false },
+    { course: "CS 251", semester: "Fall 2024", activeStatus: false },
+    { course: "CS 151", semester: "Spring 2023", activeStatus: false },
+  ];
+  const listActiveItems = coursesActive.map((course) => (
+    <li key={course.course} className="courses">  
+      {course.course} - {course.semester}
+    </li>
+  ));
+
+  const listPreviousItems = coursesPrevious.map((course) => (
+    <li key={course.course} className="courses">
+      {course.course} - {course.semester}
+    </li>
+  ));
   return (
     <>
-      <header className="profileHeader">
+      <div className="profileHeader">
+        <img src="/logo.png" className="profile-logo"></img>
         <nav className="profileNav">
           <ul className="profile-nav-list">
             <li className="profile-nav-item">
@@ -24,36 +47,25 @@ function Profile() {
               </Link>
             </li>
             <li className="profile-nav-item">
-              <Link to="/log out" className="profile-nav-link">
+              <Link to="/logout" className="profile-nav-link">
                 Log out
               </Link>
             </li>
           </ul>
         </nav>
-      </header>
-      <body className="profileBody">
+      </div>
+      <div className="profileBody">
         <div className="profileContent">
           <div></div>
           <div className="courses-section">
             <h1 className="courses-title">Courses</h1>
-            <h2 className="courses-active">Active</h2>
+            <h2 className="courses-active-inactive">Active</h2>
+            <ul>{listActiveItems}</ul>
+            <h2 className="courses-active-inactive">Previous</h2>
+            <ul>{listPreviousItems}</ul>
           </div>
         </div>
-
-        {/* </div>
-        <div className="profileContent">
-          <img
-            className="profile-picture"
-            src="http://upload.wikimedia.org/wikipedia/commons/9/9b/Photo_of_a_kitten.jpg"
-            alt="cat"
-          />
-          <div className="profile-info-name">
-            <h1 className="profile-name">John Deere</h1>
-            <h2 className="profile-title">Software Engineer</h2>
-          </div>
-        </div>
-        <div></div> */}
-      </body>
+      </div>
     </>
   );
 }

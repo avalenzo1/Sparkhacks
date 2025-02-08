@@ -1,6 +1,5 @@
 // import MainContent from './MainContent'
 
-import react from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
@@ -10,7 +9,7 @@ import Profile from './Profile.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
 import Dashboard from "./pages/Dashboard.jsx"
 import './styles/dashboard-styles/header.css'
-
+import './styles/index.css'
 
 function Logout() {
   localStorage.clear();
