@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Editor } from "@tinymce/tinymce-react";
+import { useState } from "react";
 
 function CreatePost() {
     const editorRef = useRef(null);
@@ -10,14 +11,45 @@ function CreatePost() {
         }
     };
 
+    const [title, setTitle] = useState("");;
+
+    const handleSubmit = async (e) => {
+        // setLoading(true);
+        e.preventDefault();
+
+        let description = editorRef.current ? editorRef.current.getContent() : "";
+
+        try {
+            const response = fetch("http://localhost:8000/api/post/create/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    "title": title,
+                    "description": description
+                })
+            });
+        } catch (error) {
+            console.log(error)
+        }
+
+    };
+
+
+
     return <>
-        <Editor
-                apiKey="no-api-key"
+        <form onSubmit={handleSubmit}>
+            <label>Title: </label>
+            <input name="title" value={title}
+                onChange={(e) => setTitle(e.target.value)} required={true} />
+
+            <Editor
+                apiKey="6eqy3uo28v89z9eh1onw6isemikm3gikbv2gbvozadq2qf7p"
                 onInit={(evt, editor) => (editorRef.current = editor)}
-                initialValue="<p>Start creating something amazing...</p>"
+                initialValue="<p>I have a problem with...</p>"
+                
                 init={{
                     height: 500,
-                    menubar: true,
+                    menubar: false,
                     plugins: [
                         "advlist autolink lists link image charmap print preview anchor",
                         "searchreplace visualblocks code fullscreen",
@@ -29,7 +61,11 @@ function CreatePost() {
               bullist numlist outdent indent | removeformat | help",
                 }}
             />
-            <button onClick={logContent}>Log Content</button>
+
+        <button type="submit">Submit</button>
+
+        </form>
+
     </>;
 
 }

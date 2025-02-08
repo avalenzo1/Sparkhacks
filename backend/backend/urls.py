@@ -24,7 +24,7 @@ urlpatterns = [
     path("", lambda _: redirect("/admin/", permanent=True)),
     path("admin/", admin.site.urls),
     path("tasks/", include("tasks.urls")),
-    path("post/", include("post.urls")),
+    path("api/post/", include("post.urls")),
     path("api/user/register", CreateUserView.as_view(), name="register"),
     path("api/token", TokenObtainPairView.as_view(), name="get_token"),
     path("api/token/refresh", TokenRefreshView.as_view(), name="refresh"),

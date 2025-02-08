@@ -1,30 +1,35 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 from .models import Post
 from .serializers import PostSerializer
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import AllowAny
 
 @api_view(["GET"])
+@permission_classes([AllowAny])
 def get_posts(request):
     posts = Post.objects
     serializer = PostSerializer(posts, many=True)
     return Response(serializer.data)
 
 @api_view(["GET"])
+@permission_classes([AllowAny])
 def get_post(request, id):
     post = get_object_or_404(Post, id=id)
     serializer = PostSerializer(post)
     return Response(serializer.data)
 
 @api_view(["POST"])
+@permission_classes([AllowAny])
 def create_post(request):
-    new_post = Post(title=request.data["title"], notes=request.data["description"])
+    print(request.data["title"], request.data["description"])
+    new_post = Post(title=request.data["title"], description=request.data["description"])
     new_post.save()
     
     return Response({"message": "Post created successfully. 😛"}, status=200)
 
 @api_view(["PUT"])
+@permission_classes([AllowAny])
 def edit_post(request, id):
     post = get_object_or_404(Post, id=id)
     serializer = PostSerializer(post, data=request.data, partial=True)
@@ -36,6 +41,7 @@ def edit_post(request, id):
         return Response(status=404)
     
 @api_view(["DELETE"])
+@permission_classes([AllowAny])
 def delete_post(request, id):
     post = get_object_or_404(Post, id=id)
 
