@@ -3,7 +3,7 @@
 import react from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Login from "./pages/Login"
-import Register from "./pages/Login"
+import Register from "./pages/Register"
 import Home from "./pages/Home"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Profile from './Profile.jsx'
@@ -30,8 +30,10 @@ export function App() {
         }>
 
         </Route>
+        <Route path="/test" element={<p>Test</p>}></Route>
+        <Route path="/register" element={<RegisterAndLogout />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
+        <Route path="/logout" element={<Logout />}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>
