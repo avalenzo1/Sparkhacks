@@ -41,13 +41,13 @@ function Form({ route, method }) {
                     Welcome back! Please login to your account.
                 </span>
                 <div className="email-input">
-                    <label htmlFor="email">Email Address</label>
+                    <label htmlFor="email">Username/Email Address</label>
                     <input
                         className="form-input"
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        placeholder="Username"
+                        placeholder="Username/Email Address"
                     />
                 </div>
                 <div className="password-input">
