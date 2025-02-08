@@ -37,13 +37,8 @@ function Profile() {
               </Link>
             </li>
             <li className="profile-nav-item">
-              <Link to="/courses" className="profile-nav-link">
-                Courses
-              </Link>
-            </li>
-            <li className="profile-nav-item">
-              <Link to="/messages" className="profile-nav-link">
-                Messages
+              <Link to="/profile" className="profile-nav-link">
+                Profile
               </Link>
             </li>
             <li className="profile-nav-item">

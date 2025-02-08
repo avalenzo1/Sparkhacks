@@ -25,14 +25,8 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/profile" element={
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
-        }>
-          
-        </Route>
-        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/profile" element={ <ProtectedRoute><Profile /></ProtectedRoute>}></Route>
+        <Route path="/" element={ <ProtectedRoute><Dashboard /></ProtectedRoute>}></Route>
         <Route path="/register" element={<RegisterAndLogout />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/logout" element={<Logout />}></Route>
