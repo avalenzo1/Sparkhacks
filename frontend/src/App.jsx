@@ -25,7 +25,7 @@ export function App() {
       <Routes>
         <Route path="/" element={
           <ProtectedRoute>
-            <Home />
+            <Profile />
           </ProtectedRoute>
         }>
 
