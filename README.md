@@ -45,7 +45,7 @@ To create a local copy of the demo project on your machine follow the steps belo
 2. Then, clone our repository:
   
     ```bash
-    git clone git@github.com:Givikap/sparkhacks-2025-tango-with-django.git
+    git clone git@github.com:avalenzo1/Sparkhacks.git
     ```
 
 After that, you should have a local copy of the demo project stored in the folder inside of your current directory.
