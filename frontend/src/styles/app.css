@@ -7,6 +7,10 @@
   min-width: 678px;
 }
 
+a {
+  color: #4989b0;
+}
+
 .left-side {
   display: flex;
   flex-direction: column;

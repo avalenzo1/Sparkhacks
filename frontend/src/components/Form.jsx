@@ -79,8 +79,10 @@ function Form({ route, method }) {
 
                 <div className="buttons-container">
                     <button className="log-in-bttn">{name == "Login" ? "Log In" : "Register"}</button>
+                </div>
 
-                    {name == "Login" ? <p>Already have an account? <Link to="/register">create an account</Link>. </p> : <p>Already have an account? <Link to="/login">login</Link>. </p> }
+                <div>
+                    {name == "Login" ? <p>Already have an account? <Link to="/register">Create an account</Link>. </p> : <p>Already have an account? <Link to="/login">Login to your account</Link>. </p>}
                 </div>
             </form>
 
