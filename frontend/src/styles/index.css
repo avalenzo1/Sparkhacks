@@ -53,7 +53,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  gap: 30px;
   background-color: rgb(160, 227, 246);
   margin-top: 0px;
 }
@@ -82,6 +81,7 @@ body {
   border: solid 6px #3a73a1;
   border-radius: 11px;
   background-image: url("https://wallpaperaccess.com/full/4656042.jpg");
+  margin-right: 50px;
 }
 .courses-title{
   border-radius: 50px;
