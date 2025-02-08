@@ -1,20 +1,17 @@
 
 
 .title{
-    margin: 1.5vh 0vh;
     background-color: #4989b0;
     display: flex;
-    margin-top: 6px;
     padding: 10px;
     max-width: 100%;
-    width: auto;
     border-radius: 10px;
-    margin-right: 2vh;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .piazza-info{
+    margin-top: 5px;
     border-radius: 10px;
     padding: 2px;
     text-align:justify;

@@ -27,11 +27,10 @@ function Info() {
 
   return (
     <>
-      <div className="title">
-        <strong>About us</strong>
-      </div>
-
       <div className="piazza-info">
+        <div className="title">
+          <strong>About us</strong>
+        </div>
         <p className="piazza-info-p">
           Piazza is designed to connect students, TAs, and professors so every
           student can get the help they need when they need it.
