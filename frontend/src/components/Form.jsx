@@ -38,7 +38,7 @@ function Form({ route, method }) {
         <>
             <form onSubmit={handleSubmit} className="login-container">
                 <span className="login-message">
-                    Welcome back! Please login to your account.
+                    {name === "Login" ? "Welcome back! Please login to your account." : "Welcome to Piazza! Enter your details."}
                 </span>
                 <div className="email-input">
                     <label htmlFor="email">Username/Email Address</label>

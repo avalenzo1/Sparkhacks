@@ -10,6 +10,7 @@ import ErrorPage from './pages/ErrorPage.jsx'
 import Dashboard from "./pages/Dashboard.jsx"
 import './styles/dashboard-styles/header.css'
 import './styles/index.css'
+import Course from "./pages/Course.jsx"
 
 function Logout() {
   localStorage.clear();
@@ -37,6 +38,7 @@ export function App() {
         <Route path="/register" element={<RegisterAndLogout />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/logout" element={<Logout />}></Route>
+        <Route path="/course" element={<Course />}></Route>
          <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>

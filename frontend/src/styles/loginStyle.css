@@ -1,6 +1,7 @@
 .login-message {
   color: #8a8a8a;
   margin-bottom: 20px;
+  font-size: x-large;
 }
 
 .login-container {
@@ -33,6 +34,10 @@
   border-bottom: 2px solid #c1bbbb;
 }
 
+.form-input {
+  border: none;
+}
+
 .inputs {
   border: none;
   margin-top: 10px;
@@ -41,6 +46,7 @@
   color: #4989b0;
   width: 100%;
   box-sizing: border-box;
+  
 }
 
 .inputs:focus {
