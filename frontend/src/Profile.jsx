@@ -54,43 +54,46 @@ function Profile() {
           </ul>
         </nav>
       </div>
-      <div className="profileBody">
+      <div className="profileBody"></div>
+      <div>
+        {" "}
         <div className="profileContent">
-          <div>
-            <div className="profileContent">
-              <div className="posts-section">
-                <h1 className="posts-title">Posts</h1>
-                <div className="single-post">
-                  <h1 className="post-content">
-                    Why is this so hard?
-                    <span className="italics-content">
-                      - CS 301 - 2/08/2025
-                    </span>
-                  </h1>
-                  <p className="post-text">
-                    Why is designing a new UI so complicated? We thought it was
-                    easy but we were WRONG. Are we supposed to implement a
-                    backend?
-                  </p>
-                  <p className="status-text">
-                    Status: <span className="answered-text"> Not Answered</span>
-                  </p>
-                </div>
-                <div className="single-post">
-                  <h1 className="post-content">
-                    Is this going to be on the exam?
-                    <span className="italics-content">
-                      - CS 261 - 2/07/2025
-                    </span>
-                  </h1>
-                  <p className="post-text">
-                    We were learning about DFA's but we have the exam coming up.
-                    Will it cover DFA's or is that for the next exam?
-                  </p>
-                  <p className="status-text">
-                    Status: <span className="answered-text"> Answered</span>
-                  </p>
-                </div>
+          <div className="profileContent">
+            <div className="posts-section">
+              <h1 className="posts-title">Posts</h1>
+              <div className="single-post">
+                <h1 className="post-content">
+                  Why is this so hard?
+                  <span className="italics-content">- CS 301 - 2/08/2025</span>
+                </h1>
+                <p className="post-text">
+                  Why is designing a new UI so complicated? We thought it was
+                  easy but we were WRONG. Are we supposed to implement a
+                  backend?
+                </p>
+                <p className="status-text">
+                  Status: <span className="answered-text"> Not Answered</span>
+                </p>
+              </div>
+              <div className="single-post">
+                <h1 className="post-content">
+                  Is this going to be on the exam?
+                  <span className="italics-content">- CS 261 - 2/07/2025</span>
+                </h1>
+                <p className="post-text">
+                  We were learning about DFA's but we have the exam coming up.
+                  Will it cover DFA's or is that for the next exam?
+                </p>
+                <p className="status-text">
+                  Status: <span className="answered-text"> Answered</span>
+                </p>
+              </div>
+              <div className="user-section">
+                <h1 className="name-text">John Deere</h1>
+                <h2 className="school-text"> University of Illinois Chicago</h2>
+                <h2 className="major-text"> Major: Computer Science</h2>
+                <h2 className="major-text"> Undergraduate 2027</h2>
+                <img src="/pfp.png" alt="User Image" className="user-image" />
               </div>
             </div>
           </div>

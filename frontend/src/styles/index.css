@@ -50,7 +50,7 @@ body {
 }
 
 .profileBody {
-  padding: 1rem;
+  padding: .5 px;
 }
 
 .profileContent {
@@ -61,6 +61,7 @@ body {
   gap: 30px;
   background-color: rgb(224, 224, 224);
   border-radius: 11px;
+  margin-top: 10px;
 }
 
 .profile-picture{
@@ -161,17 +162,16 @@ body {
   width: auto;
 }
 
-
 .posts-section{
-  width: 897px;
+  width: 900px;
   height: 375px;
-  background-color: #bbd3d678;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHO1eWMcIL91DSX9qzGF24pFNoHHHzw7jEMA&s");
   border-color: #3a73a1;
-  border: solid 6px #34343478;
+  border-width: 6px;
   border-radius: 11px;
+  border: solid 6px grey;
   margin-top: 310px;
   margin-left: 50px;
-  background-image: url('https://wallpaperaccess.com/full/2988724.jpg');
 }
 .posts-title{
   border-radius: 50px;
@@ -267,3 +267,56 @@ body {
   margin-top: 0px;
   text-decoration: underline;
 }
+.user-section{
+  width: 900px;
+  height: 300px;
+  background-color: #d0dbe6;
+  border: solid 6px grey;
+  border-radius: 11px;
+  margin-top: -700px;
+}
+.name-text{
+  font-family: Arial;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-style: bold;
+  margin-left: 350px;
+  padding: 10px;
+  padding-top: 25px;
+}
+.school-text{
+  font-family: Arial;
+  font-size: 35px;
+  color: rgb(70, 70, 70);
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-style:normal;
+  margin-left: 350px;
+  padding: 10px;
+  padding-top: 10px;
+}
+.major-text{
+  font-family: Arial;
+  font-size: 25px;
+  color: rgb(70, 70, 70);
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  font-style:normal;
+  margin-left: 360px;
+}
+.user-image{
+  padding: 25px;
+  display: flex;
+  width: 300px;
+  height: 260px;
+  margin-top: -320px;
+  border-radius: 50px;
+}
+
