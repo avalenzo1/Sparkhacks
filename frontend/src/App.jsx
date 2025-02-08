@@ -8,6 +8,9 @@ import Home from "./pages/Home"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Profile from './Profile.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
+import Dashboard from "./pages/Dashboard.jsx"
+import './styles/dashboard-styles/header.css'
+
 
 function Logout() {
   localStorage.clear();
@@ -23,13 +26,14 @@ export function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={
+        <Route path="/profile" element={
           <ProtectedRoute>
             <Profile />
           </ProtectedRoute>
         }>
-
+          
         </Route>
+        <Route path="/" element={<Dashboard />}></Route>
         <Route path="/test" element={<p>Test</p>}></Route>
         <Route path="/register" element={<RegisterAndLogout />}></Route>
         <Route path="/login" element={<Login />}></Route>
