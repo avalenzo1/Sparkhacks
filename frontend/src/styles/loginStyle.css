@@ -82,9 +82,9 @@
 .log-in-bttn,
 .sign-up-bttn {
   font-size: 23px;
-  width: 15vh;
   border: 1px solid #4989b0;
   overflow: hidden;
+  padding: 0 1.5rem;
 }
 
 .log-in-bttn {
