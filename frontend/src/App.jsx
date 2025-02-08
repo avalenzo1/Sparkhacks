@@ -1,6 +1,5 @@
 // import MainContent from './MainContent'
 
-<<<<<<< Updated upstream
 import react from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Login from "./pages/Login"
@@ -40,13 +39,3 @@ export function App() {
     </BrowserRouter>
   )
 }
-=======
-export function App() {
-  return (
-    <section className="App">
-      <h1>Home</h1>
-      {/* <MainContent /> */}
-    </section>
-  );
-}
->>>>>>> Stashed changes
