@@ -21,7 +21,7 @@ def create_task(request):
     new_task = Task(title=request.data["title"], notes=request.data["notes"])
     new_task.save()
     
-    return Response({"message": "Task created successfully."}, status=200)
+    return Response({"message": "Task created successfully. 😛"}, status=200)
 
 @api_view(["PUT"])
 def edit_task(request, id):
@@ -41,7 +41,7 @@ def delete_task(request, id):
     if not task.is_deleted:
         task.is_deleted = True
         task.save()
-        return Response({"message": "Task deleted successfully."}, status=200)
+        return Response({"message": "Task deleted successfully!"}, status=200)
     else:
         task.delete()
         return Response({"message": "Task deleted permanently."}, status=200)

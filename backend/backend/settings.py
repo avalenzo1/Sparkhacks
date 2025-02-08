@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
-    "tasks"
+    "tasks",
+    "post",
 ]
 
 MIDDLEWARE = [
@@ -125,7 +126,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:5173",
