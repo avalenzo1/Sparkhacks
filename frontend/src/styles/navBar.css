@@ -1,24 +1,32 @@
 .navBar-container {
-  margin-top: 6vh;
-  margin-right: 5vh;
+  background-image: url("https://eskipaper.com/images/light-blue-backgrounds-2.jpg");
+  font-style: bold;
+  background-color: rgb(64, 165, 233);
+  border-radius: 11px;
+  border: solid 5px #0087ca;
+  margin-top: 2vh;
+  margin-right: 2vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 20px;
 }
 
 .navBar-item {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
   border: none;
   position: relative; 
+  border-radius: 11px;
 }
 
 .navBar-item a {
+  font-family: Arial;
+  font-size: 30px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navBar-item::after {

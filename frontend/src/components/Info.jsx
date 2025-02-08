@@ -32,17 +32,17 @@ function Info() {
       </div>
 
       <div className="piazza-info">
-        <p>
+        <p className="piazza-info-p">
           Piazza is designed to connect students, TAs, and professors so every
           student can get the help they need when they need it.
         </p>
-        <p>
+        <p className="piazza-info-p">
           Today, millions of students across thousands of campuses are using
           Piazza for their classes. It warms me to think I started something
           that is impacting the way students learn and the way instructors
           teach.
         </p>
-        <p>
+        <p className="piazza-info-p">
           I sincerely hope Piazza enhances your experience as a student, as a
           TA, and as a professor.
         </p>

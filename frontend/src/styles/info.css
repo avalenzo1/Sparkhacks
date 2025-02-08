@@ -1,12 +1,26 @@
 
 
 .title{
-    margin: 4vh 0vh;
+    margin: 1.5vh 0vh;
+    background-color: #4989b0;
+    display: flex;
+    margin-top: 6px;
+    padding: 10px;
+    max-width: 100%;
+    width: auto;
+    border-radius: 10px;
+    margin-right: 2vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .piazza-info{
+    border-radius: 10px;
+    padding: 2px;
+    text-align:justify;
     margin-right: 2vh;
     min-width: 800px;
+    background-color: #787a7b19;
 }
 
 .resources-container{
@@ -16,4 +30,12 @@
 .resources-item{
     color: #4989b0;
     font-weight: 800;
+    margin-left: 10px;
+}
+
+.piazza-info-p{
+    margin-left: 2vh;
+    margin-right: 2vh;
+    padding: 1px;
+    text-align: justify;
 }
