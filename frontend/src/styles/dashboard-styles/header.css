@@ -29,7 +29,8 @@
 .search-bar {
   display: flex;
   align-content: center;
-  min-width: 500px;
+  max-width: 100%;
+  width:00px;
 }
 .search-bar-input {
   border: 1px solid white;
