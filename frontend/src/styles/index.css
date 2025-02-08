@@ -7,28 +7,30 @@ body {
   color: #0C3C26; 
 }
 
-.header {
+
+/* Profile */
+.profileHeader {
   background-color: #3A73A1;
   padding: 1rem;
 }
 
-.nav {
+.profileNav {
   display: flex;
   justify-content: flex-end;
 }
 
-.nav-list {
+.profile-nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.nav-item {
+.profile-nav-item {
   margin-right: 20px;
 }
 
-.nav-link {
+.profile-nav-link {
   color: white;
   text-decoration: none;
   font-family: "Papyrus", "Brush Script MT", "Lucida Handwriting", "Arial";
@@ -37,6 +39,6 @@ body {
   transition: color 0.3s;
 }
 
-.nav-link:hover {
+.profile-nav-link:hover {
   color: #47acff; /* Change the hover color */
 }

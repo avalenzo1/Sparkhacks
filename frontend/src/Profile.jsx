@@ -5,20 +5,20 @@ import './styles/index.css'
 function Profile() {
   return (
     <>  
-    <header className="header">
-      <nav className="nav">
-        <ul className="nav-list">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">Home</Link>
+    <header className="profileHeader">
+      <nav className="profileNav">
+        <ul className="profile-nav-list">
+          <li className="profile-nav-item">
+            <Link to="/" className="profile-nav-link">Home</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/about" className="nav-link">About</Link>
+          <li className="profile-nav-item">
+            <Link to="/about" className="profile-nav-link">About</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/services" className="nav-link">Services</Link>
+          <li className="profile-nav-item">
+            <Link to="/services" className="profile-nav-link">Services</Link>
           </li>
-          <li className="nav-item">
-            <Link to="/contact" className="nav-link">Contact</Link>
+          <li className="profile-nav-item">
+            <Link to="/contact" className="profile-nav-link">Contact</Link>
           </li>
         </ul>
       </nav>
