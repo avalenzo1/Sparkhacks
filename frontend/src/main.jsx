@@ -1,18 +1,10 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Tasks, Display, Create, Edit } from "@pages";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { App } from './App.jsx'
+import './styles/index.css'
 
-import "@styles/index.css";
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="tasks" element={<Tasks />}>
-        <Route index element={<Display />} />
-        <Route path="create" element={<Create />} />
-        <Route path="edit/:id" element={<Edit />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
-);
+root.render(
+  <App />
+)
