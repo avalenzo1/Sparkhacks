@@ -1,0 +1,12 @@
+.footer-info{
+    display: flex;
+    /* background: red; */
+    margin-top: 4vh;
+    justify-self: center;
+}
+
+.footer-info a{
+    /* color: #4989b0; */
+    text-decoration: none;
+    color: #4989b0;
+}

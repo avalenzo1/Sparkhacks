@@ -1,0 +1,19 @@
+
+
+.title{
+    margin: 4vh 0vh;
+}
+
+.piazza-info{
+    margin-right: 2vh;
+    min-width: 800px;
+}
+
+.resources-container{
+    display: grid;
+    gap: 2vh;
+}
+.resources-item{
+    color: #4989b0;
+    font-weight: 800;
+}

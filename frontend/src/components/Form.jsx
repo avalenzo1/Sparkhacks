@@ -1,13 +1,15 @@
 import { useState } from "react";
 import api from "../api";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
-// import LoadingIndicator from "./LoadingIndicator";
+import "../styles/loginStyle.css"
+
 
 function Form({ route, method }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
+    const [rememberMe, setRememberMe] = useState(false);
     const navigate = useNavigate();
 
     const name = method === "login" ? "Login" : "Register";
@@ -33,27 +35,58 @@ function Form({ route, method }) {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="form-container">
-            <h1>{name}</h1>
-            <input
-                className="form-input"
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Username"
-            />
-            <input
-                className="form-input"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
-            />
-            {loading && <p>loading...</p>}
-            <button className="form-button" type="submit">
-                {name}
-            </button>
-        </form>
+        <>
+            <form onSubmit={handleSubmit} className="login-container">
+                <span className="login-message">
+                    Welcome back! Please login to your account.
+                </span>
+                <div className="email-input">
+                    <label htmlFor="email">Email Address</label>
+                    <input
+                        className="form-input"
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Username"
+                    />
+                </div>
+                <div className="password-input">
+                    <label htmlFor="password">Password</label>
+                    <input
+                        className="form-input"
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Password"
+                    />
+                </div>
+                <div className="remember-container">
+                    <label htmlFor="rememberMe">
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                            checked={rememberMe}
+                            className="check-box"
+                            onChange={(e) => setRememberMe(e.target.checked)}
+                        />
+                        Remember Me
+                    </label>
+
+                    <a href="/forgot-password" className="forgot-password">
+                        Forgot Password?
+                    </a>
+                </div>
+
+                <div className="buttons-container">
+                    <button className="log-in-bttn">{name == "Login" ? "Log In" : "Register"}</button>
+
+                    {name == "Login" ? <p>Already have an account? <Link to="/register">create an account</Link>. </p> : <p>Already have an account? <Link to="/login">login</Link>. </p> }
+                </div>
+            </form>
+
+
+
+        </>
     );
 }
 

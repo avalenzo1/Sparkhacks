@@ -1,0 +1,11 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+}
+
+.MuiTypography-root {
+  color: #0c3c26;
+}
+

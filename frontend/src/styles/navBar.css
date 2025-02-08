@@ -1,0 +1,39 @@
+.navBar-container {
+  margin-top: 6vh;
+  margin-right: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navBar-item {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  position: relative; 
+}
+
+.navBar-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.navBar-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom center; 
+  transition: transform 0.25s ease-out;
+}
+
+.navBar-item:hover::after {
+  transform: scaleX(1);
+}
