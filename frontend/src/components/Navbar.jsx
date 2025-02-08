@@ -1,4 +1,6 @@
-function NavBar() {
+import "../styles/navBar.css";
+
+function Navbar() {
   return (
     <div className="navBar-container">
       <div className="navBar-item">
@@ -31,4 +33,4 @@ function NavBar() {
     </div>
   );
 }
-export default NavBar;
+export default Navbar;

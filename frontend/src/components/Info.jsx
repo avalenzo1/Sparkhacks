@@ -1,6 +1,7 @@
 import React from "react";
+import "../styles/info.css";
 
-function Information() {
+function Info() {
   const resources = [
     {
       title: "Creating and Configuring Your Class",
@@ -70,4 +71,4 @@ function Information() {
   );
 }
 
-export default Information;
+export default Info;

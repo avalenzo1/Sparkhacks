@@ -1,6 +1,7 @@
 import React from "react";
+import "../styles/contactinfo.css";
 
-function ContactInfo() {
+function Contact() {
   return (
     <>
       <footer className="footer-info">
@@ -23,4 +24,4 @@ function ContactInfo() {
   );
 }
 
-export default ContactInfo;
+export default Contact;

@@ -12,7 +12,7 @@ function Dashboard() {
             <div>
                 pfp NAME
             </div>
-            <div>'
+            <div>
                 PIAZZA LOGO
             </div>
         </header>
