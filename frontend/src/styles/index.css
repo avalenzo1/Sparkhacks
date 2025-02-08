@@ -52,7 +52,7 @@ body {
 .profileContent {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 10px;
   gap: 30px;
 }
@@ -62,7 +62,6 @@ body {
   width: 300px;
   height: auto;
   border-radius: 5%;
-  border-color: #09598a;
   border-width: 5px;
 }
 
@@ -72,4 +71,38 @@ body {
   justify-content: flex-start;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.courses-section{
+  width: 410px;
+  height: 683px;
+  background-color: #9fbdd7;
+  border-color: #3a73a1;
+  border-width: 6px;
+  border-radius: 11px;
+}
+.courses-title{
+  border-radius: 50px;
+  background-color: #3a73a1;
+  width: 350px;
+  height: 102px;
+  font-family: fantasy;
+  font-size: 40.8px;
+  color: white;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: bold;
+}
+
+.courses-active{
+  font-family: fantasy;
+  font-size: 24.8;
+  color: black;
+  margin: 20px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-style: bold;
 }
