@@ -48,20 +48,14 @@ body {
   color: #47acff;
 }
 
-.profileBody {
-  padding: .5 px;
-  background-color: rgb(224, 224, 224);
-}
-
 .profileContent {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
   gap: 30px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 11px;
-  margin-top: 10px;
+  background-color: rgb(160, 227, 246);
+  margin-top: 0px;
 }
 
 .profile-picture{
@@ -106,14 +100,15 @@ body {
 
 .courses-active-inactive{
   font-family: "Arial";
-  font-size: 24.8px;
+  font-size: 30px;
   color: black;
   margin: 10px auto;
   padding: 10px;
   display: flex;
   text-align: start;
   justify-content: flex-start;
-  font-weight: normal;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .courses{
@@ -274,7 +269,7 @@ body {
   background-color: #d0dbe6;
   border: solid 6px grey;
   border-radius: 11px;
-  margin-top: -700px;
+  margin-top: -690px;
 }
 .name-text{
   font-family: Arial;
@@ -320,4 +315,3 @@ body {
   margin-top: -320px;
   border-radius: 50px;
 }
-

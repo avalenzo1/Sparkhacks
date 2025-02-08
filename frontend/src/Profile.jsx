@@ -49,8 +49,7 @@ function Profile() {
           </ul>
         </nav>
       </div>
-      <div className="profileBody"></div>
-      <div>
+      <div className="profile-bg">
         {" "}
         <div className="profileContent">
           <div className="profileContent">
