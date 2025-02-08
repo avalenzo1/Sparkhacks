@@ -39,7 +39,6 @@ body {
 .profile-nav-link {
   color: white;
   text-decoration: none;
-  font-family: "Papyrus", "Brush Script MT", "Lucida Handwriting", "Arial";
   font-size: 1.2rem;
   font-style: bold;
   transition: color 0.3s;
