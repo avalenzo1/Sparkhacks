@@ -11,7 +11,7 @@ import Home from "./pages/Home"
 import ProtectedRoute from "./components/ProtectedRoute"
 import Profile from './Profile.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
-
+import './styles/index.css'
 
 function Logout() {
   localStorage.clear();
