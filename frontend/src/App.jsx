@@ -30,7 +30,7 @@ export function App() {
         <Route path="/register" element={<RegisterAndLogout />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/logout" element={<Logout />}></Route>
-        <Route path="/course" element={<ProtectedRoute><Course /></ProtectedRoute>}></Route>
+        <Route path="/create" element={<ProtectedRoute><Course /></ProtectedRoute>}></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
     </BrowserRouter>

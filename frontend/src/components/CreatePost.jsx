@@ -11,7 +11,7 @@ function CreatePost() {
         }
     };
 
-    const [title, setTitle] = useState("");;
+    const [title, setTitle] = useState("");
 
     const handleSubmit = async (e) => {
         // setLoading(true);

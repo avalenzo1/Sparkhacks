@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import homeIcon from "../imgs/home-icon.png";
 import socialIcon from "../imgs/social-icon.png";
 import searchIcon from "../imgs/search-icon.png";
@@ -104,6 +104,80 @@ function getRandomPostCount() {
 }
 
 function Dashboard() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [title, setTitle] = useState("");
+
+  function deletePost(id) {
+    try {
+      const response = fetch("http://localhost:8000/api/post/delete/" + id + "/", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "id": id
+        })
+      });
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  function reload() {
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch("http://localhost:8000/api/post/"); // No need to specify GET, it's the default
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`); // Handle non-2xx responses
+          }
+          const data = await response.json(); // Await the json() promise
+          setPosts(data);
+        } catch (err) {
+          setError(err);
+          console.error("Error fetching posts:", err);
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      fetchData();
+    }, []);
+  }
+
+  reload();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+
+  const handleSubmit = async (e) => {
+    // setLoading(true);
+    e.preventDefault();
+
+    let description = "no description";
+
+    try {
+      const response = fetch("http://localhost:8000/api/post/create/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "title": title,
+          "description": description
+        })
+      });
+    } catch (error) {
+      console.log(error)
+    }
+
+  };
+
+
   return (
     <>
       <header className="header-container">
@@ -166,15 +240,45 @@ function Dashboard() {
             <div className="pfp-post">
               <img src={pfp} alt="" />
             </div>
-            <input
-              className="question-input"
-              type="text"
-              placeholder="Share that question that keeps you awake at night..."
-            />
-            <button className="create-post-bttn">Create Post</button>
+
+            <form onSubmit={handleSubmit} style={{ display: "flex", gap: "0.5rem" }}>
+              <input
+                className="question-input"
+                onChange={(e) => setTitle(e.target.value)} required={true}
+                type="text"
+                placeholder="Share that question that keeps you awake at night..."
+              />
+
+              <button className="create-post-bttn">Create Post</button>
+            </form>
+
+
           </div>
 
           <div className="most-relevant">Most Relevant Posts</div>
+
+          {posts.map((post) => (
+            <div key={post.id} className="question-container">
+              <strong className="question-title">{post.title}</strong>
+              <div className="folder-tag">cs261</div>
+              <div className="question-footer">
+                <div className="pfp-question-container">
+                  <img src={pfp} alt="" />
+                </div>
+                <div className="name-container-info">
+                  <strong>John Doe</strong>
+                  <span>today</span>
+                </div>
+                <div className="question-stats">
+                  <span className="stat">{`${0} views`}</span>
+                  <span className="stat">{`${0} likes`}</span>
+                  <span className="stat">{`${0} replies`}</span>
+                </div>
+
+                <button onClick={deletePost(post.id)}>Delete</button>
+              </div>
+            </div>
+          ))}
 
           {questions.map((q, index) => (
             <div key={index} className="question-container">
@@ -196,6 +300,7 @@ function Dashboard() {
               </div>
             </div>
           ))}
+
         </div>
 
         <div className="column-3">

@@ -1,6 +1,6 @@
 import Form from '../components/Form'
 import Info from "../components/Info";
-import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 import Contact from "../components/Contact";
 
 import "../styles/loginStyle.css"
